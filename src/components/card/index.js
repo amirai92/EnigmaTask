@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
@@ -16,6 +15,7 @@ const useStyles = makeStyles({
     display: "inline-block",
     margin: "0 2px",
     transform: "scale(0.8)",
+    color: "green",
   },
   title: {
     fontSize: 14,
@@ -53,7 +53,6 @@ export default function OutlinedCard() {
   return (
     <Card className={classes.root} variant="outlined">
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Product</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
@@ -63,6 +62,7 @@ export default function OutlinedCard() {
           value={product}
           onChange={handleChange}
         >
+          <MenuItem value={"Product"}>Product</MenuItem>
           <MenuItem value={"Client"}>Client Product</MenuItem>
           <MenuItem value={"User"}>Any User Product</MenuItem>
           <MenuItem value={"Admin"}>Admin Product</MenuItem>
