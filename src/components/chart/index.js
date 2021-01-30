@@ -481,7 +481,7 @@ function Graph() {
       type: "candlestick",
     },
     title: {
-      text: " ",
+      text: "",
       align: "left",
     },
     annotations: {
